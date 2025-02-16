@@ -1,0 +1,179 @@
+{
+"provinces":[
+ {
+  "id": 1,
+  "type": "ខេត្ត​",
+  "code": "1",
+  "khmer_name": "បន្ទាយមានជ័យ",
+  "name": "Banteay Meanchey"
+ },
+ {
+  "id": 2,
+  "type": "ខេត្ត​",
+  "code": "2",
+  "khmer_name": "បាត់ដំបង",
+  "name": "Battambang"
+ },
+ {
+  "id": 3,
+  "type": "ខេត្ត​",
+  "code": "3",
+  "khmer_name": "កំពង់ចាម",
+  "name": "Kampong Cham"
+ },
+ {
+  "id": 4,
+  "type": "ខេត្ត​",
+  "code": "4",
+  "khmer_name": "កំពង់ឆ្នាំង",
+  "name": "Kampong Chhnang"
+ },
+ {
+  "id": 5,
+  "type": "ខេត្ត​",
+  "code": "5",
+  "khmer_name": "កំពង់ស្ពឺ",
+  "name": "Kampong Speu"
+ },
+ {
+  "id": 6,
+  "type": "ខេត្ត​",
+  "code": "6",
+  "khmer_name": "កំពង់ធំ",
+  "name": "Kampong Thom"
+ },
+ {
+  "id": 7,
+  "type": "ខេត្ត​",
+  "code": "7",
+  "khmer_name": "កំពត",
+  "name": "Kampot"
+ },
+ {
+  "id": 8,
+  "type": "ខេត្ត​",
+  "code": "8",
+  "khmer_name": "កណ្ដាល",
+  "name": "Kandal"
+ },
+ {
+  "id": 9,
+  "type": "ខេត្ត​",
+  "code": "9",
+  "khmer_name": "កោះកុង",
+  "name": "Koh Kong"
+ },
+ {
+  "id": 10,
+  "type": "ខេត្ត​",
+  "code": "10",
+  "khmer_name": "ក្រចេះ",
+  "name": "Kratie"
+ },
+ {
+  "id": 11,
+  "type": "ខេត្ត​",
+  "code": "11",
+  "khmer_name": "មណ្ឌលគិរី",
+  "name": "Mondul Kiri"
+ },
+ {
+  "id": 12,
+  "type": "ខេត្ត​",
+  "code": "12",
+  "khmer_name": "រាជធានីភ្នំពេញ",
+  "name": "Phnom Penh"
+ },
+ {
+  "id": 13,
+  "type": "ខេត្ត​",
+  "code": "13",
+  "khmer_name": "ព្រះវិហារ",
+  "name": "Preah Vihear"
+ },
+ {
+  "id": 14,
+  "type": "ខេត្ត​",
+  "code": "14",
+  "khmer_name": "ព្រៃវែង\t",
+  "name": "Prey Veng"
+ },
+ {
+  "id": 15,
+  "type": "ខេត្ត​",
+  "code": "15",
+  "khmer_name": "ពោធិ៍សាត់\t",
+  "name": "Pursat"
+ },
+ {
+  "id": 16,
+  "type": "ខេត្ត​",
+  "code": "16",
+  "khmer_name": "រតនគិរី\t",
+  "name": "Ratanak Kiri"
+ },
+ {
+  "id": 17,
+  "type": "ខេត្ត​",
+  "code": "17",
+  "khmer_name": "សៀមរាប\t",
+  "name": "Siemreap"
+ },
+ {
+  "id": 18,
+  "type": "ខេត្ត​",
+  "code": "18",
+  "khmer_name": "ព្រះសីហនុ\t",
+  "name": "Preah Sihanouk"
+ },
+ {
+  "id": 19,
+  "type": "ខេត្ត​",
+  "code": "19",
+  "khmer_name": "ស្ទឹងត្រែង\t",
+  "name": "Stung Treng"
+ },
+ {
+  "id": 20,
+  "type": "ខេត្ត​",
+  "code": "20",
+  "khmer_name": "ស្វាយរៀង\t",
+  "name": "Svay Rieng"
+ },
+ {
+  "id": 21,
+  "type": "ខេត្ត​",
+  "code": "21",
+  "khmer_name": "តាកែវ\t",
+  "name": "Takeo"
+ },
+ {
+  "id": 22,
+  "type": "ខេត្ត​",
+  "code": "22",
+  "khmer_name": "ឧត្ដរមានជ័យ\t",
+  "name": "Oddar Meanchey"
+ },
+ {
+  "id": 23,
+  "type": "ខេត្ត​",
+  "code": "23",
+  "khmer_name": "កែប\t",
+  "name": "Kep"
+ },
+ {
+  "id": 24,
+  "type": "ខេត្ត​",
+  "code": "24",
+  "khmer_name": "ប៉ៃលិន\t",
+  "name": "Pailin"
+ },
+ {
+  "id": 25,
+  "type": "ខេត្ត​",
+  "code": "25",
+  "khmer_name": "ត្បូងឃ្មុំ\t",
+  "name": "Tboung Khmum"
+ }
+]
+}
