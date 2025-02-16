@@ -31,7 +31,7 @@ ALLOWED_HOSTS = [
     '192.168.8.123',  # Your local IP
     'localhost:8080',
     ' 0798-45-118-77-55.ngrok-free.app',
-    'management-systems-django-production.up.railway.app',
+    '.onrender.com',
 ]
 
 
@@ -85,19 +85,12 @@ WSGI_APPLICATION = 'management_system.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-import os 
-from dotenv import load_dotenv
-
-load_dotenv()
+import dj_database_url
+import os
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('DB_NAME'),
-        'USER': os.getenv('DB_USER'),
-        'PASSWORD': os.getenv('DB_PASSWORD'),
-        'HOST': os.getenv('DB_HOST'),
-        'PORT': os.getenv('DB_PORT'),
+        'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
     }
 }
 
