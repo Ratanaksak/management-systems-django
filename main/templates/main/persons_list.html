@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persons List</title>
+    <!-- Bootstrap CSS -->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+5hb7D6iB1RE6tJMEzF3fWZ2Pr5vvuTrKDr1NjL" 
+        crossorigin="anonymous"
+    >
+    <style>
+        body {
+            background-color: #f8f9fa; /* Light gray background */
+        }
+        h1 {
+            color: #343a40; /* Darker gray for header text */
+            font-weight: bold;
+        }
+        table {
+            
+            background-color: #00000027; /* White table background */
+            border-radius: 8px; /* Rounded corners */
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for a modern look */
+        }
+        thead {
+            background-color: #007c92; /* Blue header */
+            color: #ffffff; /* White text for header */
+        }
+        tbody tr:nth-child(odd) {
+            background-color: #f2f2f2; /* Light gray for odd rows */
+        }
+        tbody tr:nth-child(even) {
+            background-color: #e9ecef; /* Slightly darker gray for even rows */
+        }
+        tbody tr:hover {
+            background-color: #d1ecf1; /* Light blue highlight on hover */
+        }
+        td, th {
+            text-align: center; /* Centered text in columns */
+            vertical-align: middle; /* Center text vertically */
+            padding: 12px; /* Comfortable padding */
+            font-family: khmer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Persons List</h1>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Province (Khmer)</th>
+                        <th>District (Khmer)</th>
+                        <th>Commune (Khmer)</th>
+                        <th>Village (Khmer)</th>
+                        <th>Price-KHR</th>
+                        <th>Price-USD</th>
+                        <th>Gender</th>
+                        <th>Relationship</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for person in persons %}
+                    <tr>
+                        <td>{{ person.name }}</td>
+                        <td>{{ person.province.kh_name|default:"N/A" }}</td>
+                        <td>{{ person.district.kh_name|default:"N/A" }}</td>
+                        <td>{{ person.commune.kh_name|default:"N/A" }}</td>
+                        <td>{{ person.village.kh_name|default:"N/A" }}</td>
+                        <td>{{ person.price_khr }}</td>
+                        <td>{{ person.price_usd }}</td>
+                        <td>{{ person.gender }}</td>
+                        <td>{{ person.relationship }}</td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="5" class="text-center">No persons found.</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-w76A7AH686mIFZpCuOQ5XxktLRbfE6vjWZY2zEYAA4hit4Tk0IbL5wXmZbx6INoK" 
+        crossorigin="anonymous">
+    </script>
+</body>
+</html>

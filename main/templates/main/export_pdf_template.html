@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Export PDF - Person List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            margin: 0;
+            padding: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h2>Person List - Exported PDF</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Province (Khmer)</th>
+                <th>District (Khmer)</th>
+                <th>Commune (Khmer)</th>
+                <th>Village (Khmer)</th>
+                <th>Price (USD)</th>
+                <th>Price (KHR)</th>
+                <th>Gender</th>
+                <th>Relationship</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for person in persons %}
+            <tr>
+                <td>{{ person.name }}</td>
+                <td>{{ person.province }}</td>
+                <td>{{ person.district }}</td>
+                <td>{{ person.commune }}</td>
+                <td>{{ person.village }}</td>
+                <td>${{ person.price_usd}}</td>
+                <td>៛ {{ person.price_khr }}</td>
+                <td>{{ person.gender }}</td>
+                <td>{{ person.relationship }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

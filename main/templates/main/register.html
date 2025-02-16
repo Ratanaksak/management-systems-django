@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animated Login Form</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/register_style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		dl, ol, ul {
+        margin-top: 0;
+        margin-bottom: 5rem;
+        display: none;
+        }
+        .helptext{
+          display: none;
+
+        }
+     
+        .form p {
+        margin: 1.rem 0;
+        font-size: 1.5rem;
+        font-family: "Times New Roman", Times, serif;
+        }
+		input[type="text"], input[type="password"] {
+		width: 100%;
+		display: inline;
+		padding: 0.8rem;
+		margin: 1rem 0;
+		font-size: 1rem;
+		border: 1px solid #ccc;
+		border-radius: 10px;
+		}
+		.form-wrapper {
+		width: 100%;
+		}
+		.form-wrapper .form {
+		display: none;
+		}
+		.form-wrapper .form.sign-in {
+		display: block
+		}
+	</style>
+</head>
+<body>
+	<img class="wave" src="/static/images/wave.png">
+	<div class="container">
+		<div class="img">
+			<img src="/static/images/bg.svg">
+		</div>
+		<div class="login-content">
+			
+			<form action="index.html">
+				<img src="/static/images/avatar.svg">
+				<h2 class="title">Welcome</h2>
+				<div class="col align-center flex-col sign-in">
+					<div class="form-wrapper align-center">
+					  <div class="form sign-in">
+						<form method="post" class="mx-auto border p-4 rounded" style="max-width: 400px;">
+						  {% csrf_token %}
+						  {{ form.as_p }}
+						  <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+					  </form>
+					  <p>
+						<span > Don't have an account? </span>
+                		<a style="text-align: center; font-size: large;" href="{% url 'login' %}">Login here </a>
+					  </p>
+					</div>
+            	
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="/static/js/main.js"></script>
+</body>
+</html>

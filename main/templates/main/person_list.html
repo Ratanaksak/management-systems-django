@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person List</title>
+</head>
+<body>
+    <h1>Person List</h1>
+
+    <!-- Table of Persons -->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price (USD)</th>
+                <th>Price (KHR)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for person in persons %}
+            <tr>
+                <td>{{ person.name }}</td>
+                <td>{{ person.price_usd }}</td>
+                <td>{{ person.price_khr }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- Totals -->
+    <h2>Totals</h2>
+    <p><strong>Total Price (USD):</strong> {{ total_price_usd }}</p>
+    <p><strong>Total Price (KHR):</strong> {{ total_price_khr }}</p>
+    <p><strong>Grand Total:</strong> {{ grand_total }}</p>
+</body>
+</html>

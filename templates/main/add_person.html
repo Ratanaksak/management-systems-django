@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Location Input Form</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .form-container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group label {
+            font-weight: bold;
+            color: #333;
+        }
+        .form-control, .custom-select {
+            border-radius: 8px;
+            height: 45px;
+        }
+        .btn-primary {
+            border-radius: 8px;
+            width: 100%;
+            padding: 12px;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="form-container mx-auto">
+            <h2 class="text-center mb-4">Add Person</h2>
+            <form method="POST" action="{% url 'add_person' %}">
+                {% csrf_token %}
+                
+                <!-- Province -->
+                <div class="form-group">
+                    <label for="province">Province:</label>
+                    <select id="province" name="province" class="custom-select">
+                        <option value="">Select Province</option>
+                        {% for province in provinces %}
+                            <option value="{{ province.id }}">{{ province.name }} ({{ province.kh_name }})</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <!-- District -->
+                <div class="form-group">
+                    <label for="district">District:</label>
+                    <select id="district" name="district" class="custom-select">
+                        <option value="">Select District</option>
+                        {% for district in districts %}
+                            <option value="{{ district.id }}">{{ district.name }} ({{ district.kh_name }})</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <!-- Commune -->
+                <div class="form-group">
+                    <label for="commune">Commune:</label>
+                    <select id="commune" name="commune" class="custom-select">
+                        <option value="">Select Commune</option>
+                        {% for commune in communes %}
+                            <option value="{{ commune.id }}">{{ commune.name }} ({{ commune.kh_name }})</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <!-- Village -->
+                <div class="form-group">
+                    <label for="village">Village:</label>
+                    <select id="village" name="village" class="custom-select">
+                        <option value="">Select Village</option>
+                        {% for village in villages %}
+                            <option value="{{ village.id }}">{{ village.name }} ({{ village.kh_name }})</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <!-- Full Name -->
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter full name" required>
+                </div>
+
+                <!-- Price (USD) -->
+                <div class="form-group">
+                    <label for="price_usd">Price (USD):</label>
+                    <input type="number" class="form-control" id="price_usd" name="price_usd" placeholder="Enter price in USD" required>
+                </div>
+
+                <!-- Price (KHR) -->
+                <div class="form-group">
+                    <label for="price_khr">Price (KHR):</label>
+                    <input type="number" class="form-control" id="price_khr" name="price_khr" placeholder="Enter price in KHR" required>
+                </div>
+
+                <!-- Gender -->
+                <div class="form-group">
+                    <label>Gender:</label>
+                    <div>
+                        <input type="radio" id="male" name="gender" value="Male" required>
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="Female" required>
+                        <label for="female">Female</label>
+                    </div>
+                </div>
+
+                <!-- Relationship -->
+                <div class="form-group">
+                    <label>Relationship:</label>
+                    <div>
+                        <input type="radio" id="wife" name="relationship" value="Wife" required>
+                        <label for="wife">Wife</label>
+                        <input type="radio" id="husband" name="relationship" value="Husband" required>
+                        <label for="husband">Husband</label>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary">Save</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
