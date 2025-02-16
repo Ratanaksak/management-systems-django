@@ -86,13 +86,11 @@ WSGI_APPLICATION = 'management_system.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 import dj_database_url
-import os
 
 DATABASES = {
-    'default': {
-        'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
-    }
+    'default': dj_database_url.config(default='postgresql://testing_pqrp_user:bjhWjem9lQRWteZS3eij3zQBHVpjmpGb@dpg-cuon6nbqf0us7393jhg0-a.oregon-postgres.render.com/testing_pqrp')
 }
+
 
 
 # Password validation
@@ -133,7 +131,7 @@ USE_I18N = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [BASE_DIR / "static"]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
