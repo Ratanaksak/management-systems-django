@@ -31,7 +31,7 @@ ALLOWED_HOSTS = [
     '192.168.8.123',  # Your local IP
     'localhost:8080',
     ' 0798-45-118-77-55.ngrok-free.app',
-    '.onrender.com',
+    'management-systems-django.onrender.com',
 ]
 
 
@@ -58,6 +58,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 
 ]
 
@@ -129,8 +130,14 @@ USE_I18N = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
-STATICFILES_DIRS = [BASE_DIR / "static"]
+
+
+# Static files settings
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',  # Make sure your static files are in this directory
+]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
@@ -141,6 +148,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CSRF_TRUSTED_ORIGINS = [
     'https://0798-45-118-77-55.ngrok-free.app',  # Add your ngrok URL
-    'https://management-systems-django-production.up.railway.app/',
+    'https://management-systems-django.onrender.com',
 ]
 
