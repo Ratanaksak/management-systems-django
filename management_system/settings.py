@@ -31,6 +31,7 @@ ALLOWED_HOSTS = [
     '192.168.8.123',  # Your local IP
     'localhost:8080',
     ' 0798-45-118-77-55.ngrok-free.app',
+    'management-systems-django-production.up.railway.app',
 ]
 
 
@@ -149,5 +150,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CSRF_TRUSTED_ORIGINS = [
     'https://0798-45-118-77-55.ngrok-free.app',  # Add your ngrok URL
+    'https://management-systems-django-production.up.railway.app/',
 ]
 
